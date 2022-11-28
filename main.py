@@ -16,7 +16,7 @@ print('''
 z = random.randint(0, 8)
 e = input("[?] Your schoology email: ")
 pwd = maskpass.askpass("[?] Your schoology password: ", mask="") 
-print("[*] attempting to log into schoology with... " + e)
+print("[+] attempting to log into schoology with... " + e)
 time.sleep(z)
 print("\033[32m\t> successfully logged in as " + e + " [\u2713]")
 
