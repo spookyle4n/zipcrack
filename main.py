@@ -16,7 +16,7 @@ print('''
 e = input("[?] Your schoology email: ")
 pwd = maskpass.askpass("[?] Your schoology password: ", mask="") 
 print("[*] attempting to log into schoology with... " + e)
-time.sleep(4)
+time.sleep(1, 4)
 print("\033[32m\t> successfully logged in as " + e + " [\u2713]")
 
 c = input("\033[36m[?] Victims schoology email?: ")
@@ -35,9 +35,9 @@ if a == 'y':
         randomUpperLetter = chr(random.randint(ord('A'), ord('Z')))
         randomLowerLetter = chr(random.randint(ord('a'), ord('z')))
         if randomnumber + randomnumber2 + randomUpperLetter + randomLowerLetter == '39Qh':
-            print("\033[32m[+] password 676848Vr\nsuccess! [\u2713] ")
+            print("\033[32m[+] password 39Qh\nsuccess! [\u2713] ")
             print("schoology email: " + c)
-            print("schoology password: 676848Vr")
+            print("schoology password: 39Qh")
             time.sleep(100000000)
             
         print("\033[31m[+] bruting: " + randomnumber + randomnumber2 + randomUpperLetter + randomLowerLetter, flush=True)
