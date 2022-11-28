@@ -13,10 +13,11 @@ print('''
                \033[36m
                
 ''')
+z = random.randint(0, 8)
 e = input("[?] Your schoology email: ")
 pwd = maskpass.askpass("[?] Your schoology password: ", mask="") 
 print("[*] attempting to log into schoology with... " + e)
-time.sleep(1, 4)
+time.sleep(z)
 print("\033[32m\t> successfully logged in as " + e + " [\u2713]")
 
 c = input("\033[36m[?] Victims schoology email?: ")
@@ -24,7 +25,7 @@ b = int(input("[?] How many passwords would you like to try?: "))
 a = input("[?] Start Attack? [y/n]: ")
 if a == 'y':
     print("\033[31m[!] Starting bruteforce on " + c)
-    time.sleep(2)
+    time.sleep(z)
     for i in range(b):
         randomnumber = chr(random.randint(ord('0'), ord('9')))
         randomnumber2 = chr(random.randint(ord('0'), ord('9')))
