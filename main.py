@@ -1,6 +1,7 @@
-from random import seed
 from random import randint
 import time, random, string, maskpass
+from webbot import Browser
+driver = Browser()
 print('''
 \033[36m
 .▄▄ · ▄▄· ▄ .▄         ▄▄▌       ▄▄ • ▄· ▄▌    ▄ •▄▪ ▄▄▌ ▄▄▌ ▄▄▄ ▄▄▄  
