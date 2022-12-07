@@ -14,19 +14,7 @@ print('''
                \033[36m
                
 ''')
-z = random.randint(0, 8)
-e = input("[?] Your schoology email: ")
-pwd = maskpass.askpass("[?] Your schoology password: ", mask="") 
-print("[+] attempting to log into schoology with... " + e)
-time.sleep(z)
-print("\033[32m\t> successfully logged in as " + e + " [\u2713]")
-
-c = input("\033[36m[?] Victims schoology email?: ")
-b = int(input("[?] How many passwords would you like to try?: "))
-a = input("[?] Start Attack? [y/n]: ")
-if a == 'y':
-    print("\033[31m[!] Starting bruteforce on " + c)
-    time.sleep(z)
+def bruteforce():
     for i in range(b):
         randomnumber = chr(random.randint(ord('0'), ord('9')))
         randomnumber2 = chr(random.randint(ord('0'), ord('9')))
@@ -44,3 +32,24 @@ if a == 'y':
             
         print("\033[31m[+] bruting: " + randomnumber + randomnumber2 + randomUpperLetter + randomLowerLetter, flush=True)
         time.sleep(0.000001)
+
+def login():
+    driver.go_to('https://app.schoology.com/login')
+    driver.type(e, into='Email')
+    driver.type(pwd, into='Password')
+    driver.click('Log In')
+    print("[+] attempting to log into schoology with... " + e)
+    time.sleep(z)
+    print("\033[32m\t> successfully logged in as " + e + " [\u2713]")
+
+def main():
+    login()
+    c = input("\033[36m[?] Victims schoology email?: ")
+    b = int(input("[?] How many passwords would you like to try?: "))
+    a = input("[?] Start Attack? [y/n]: ")
+    if a == 'y':
+        print("\033[31m[!] Starting bruteforce on " + c)
+        time.sleep(z)
+        bruteforce()
+
+main()
